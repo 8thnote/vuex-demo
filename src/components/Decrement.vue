@@ -1,12 +1,12 @@
 <template>
     <div class="hello">
-        <button @click='increment'>Increment +{{ amount }}</button>
+        <button @click='decrement'>Decrement -{{ amount }}</button>
     </div>
 </template>
 
 <script>
 import { getAmount } from '../vuex/getters'
-import { incrementCounter } from '../vuex/actions'
+import { decrementCounter } from '../vuex/actions'
 
 export default {
     data () {
@@ -19,7 +19,7 @@ export default {
             amount: getAmount
         },
         actions: {
-            increment: incrementCounter
+            decrement: decrementCounter
         }
     }
 }
